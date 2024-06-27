@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/applocal.dart';
-import 'package:flutter_application_1/test.dart';
+import 'package:flutter_application_1/home.dart';
+import 'package:flutter_application_1/page2.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: test(),
+      home: home(),
       localizationsDelegates: const [
         AppLocale.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         Locale("ar", ""),
       ],
       //
-      locale: Locale("ar", ""),
+      locale: Locale("er", ""),
 
       //
       localeResolutionCallback: (currentLang, supportedLang) {
@@ -37,6 +38,10 @@ class MyApp extends StatelessWidget {
           }
         }
         return supportedLang.first;
+      },
+      //
+      routes: {
+        'page2': (context) => const page2(),
       },
     );
   }
