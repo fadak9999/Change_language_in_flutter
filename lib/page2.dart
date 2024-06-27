@@ -22,15 +22,11 @@ class _page2State extends State<page2> {
       backgroundColor: Color.fromARGB(255, 208, 208, 206),
       appBar: AppBar(),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-              margin: EdgeInsets.only(left: 150),
-              child: Text("${getLang(context, "textp2_1")}")),
-
-          ///______________________________
           CheckboxListTile(
-              title: Text("one"),
+              checkColor: Colors.amber,
+              activeColor: Colors.black,
+              title: Text("${getLang(context, "one")}"),
               value: one,
               onChanged: ((value) {
                 setState(() {
@@ -38,7 +34,9 @@ class _page2State extends State<page2> {
                 });
               })),
           CheckboxListTile(
-              title: Text("two"),
+              checkColor: Colors.amber,
+              activeColor: Colors.black,
+              title: Text("${getLang(context, "tow")}"),
               value: two,
               onChanged: ((value) {
                 setState(() {
@@ -46,14 +44,15 @@ class _page2State extends State<page2> {
                 });
               })),
           CheckboxListTile(
-              title: Text("three"),
+              checkColor: Colors.amber,
+              activeColor: Colors.black,
+              title: Text("${getLang(context, "three")}"),
               value: three,
               onChanged: ((value) {
                 setState(() {
                   three = value!;
                 });
               })),
-          //
         ],
       ),
     );

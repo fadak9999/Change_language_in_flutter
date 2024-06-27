@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         Locale("ar", ""),
       ],
       //
-      locale: Locale("er", ""),
+      locale: Locale("ar", ""),
 
       //
       localeResolutionCallback: (currentLang, supportedLang) {
